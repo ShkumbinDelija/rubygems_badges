@@ -12,7 +12,7 @@ class Web < Sinatra::Base
   end
 
   def fetch_badge(gem_downloads:)
-    URI.parse("https://raster.shields.io/badge/gem%20downloads-#{gem_downloads}-green.png").open.read
+    URI.parse("https://raster.shields.io/badge/gem%20downloads-#{gem_downloads}-4bc425.png").open.read
   end
 
   def fetch_owner_downloads(owner:)
