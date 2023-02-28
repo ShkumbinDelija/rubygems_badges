@@ -21,6 +21,8 @@ class Web < Sinatra::Base
     end
   end
 
+  before { content_type 'image/svg' }
+
   get '/gems/:gem_name' do
     gem_name = params.fetch('gem_name')
 
