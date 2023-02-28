@@ -23,7 +23,10 @@ class Web < Sinatra::Base
     end
   end
 
-  before { content_type 'image/png' }
+  before do
+    content_type 'image/png'
+    headers['Content-Disposition'] = 'attachment; filename="remote-file"'
+  end
 
   get '/gems/:gem_name' do
     gem_name = params.fetch('gem_name')
