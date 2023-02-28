@@ -17,7 +17,7 @@ end
 get '/:gem_name' do
   gem_name = params.fetch('gem_name')
 
-  gem_downloads = number_with_delimiter(number: fetch_gem_downloads(gem_name:))
+  gem_downloads = number_with_delimiter(number: fetch_gem_downloads(gem_name: gem_name))
 
-  fetch_badge(gem_downloads:)
+  fetch_badge(gem_downloads: gem_downloads)
 end
