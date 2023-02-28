@@ -25,7 +25,7 @@ class Web < Sinatra::Base
 
   before do
     content_type 'image/png'
-    headers['Content-Disposition'] = 'attachment; filename="remote-file"'
+    headers['Content-Disposition'] = 'inline; filename="remote-file"'
   end
 
   get '/gems/:gem_name' do
