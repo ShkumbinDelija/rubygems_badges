@@ -12,7 +12,7 @@ class Web < Sinatra::Base
   end
 
   def fetch_badge(gem_downloads:)
-    Net::HTTP.get_response(URI("https://img.shields.io/badge/gem%20downloads-#{gem_downloads}-green")).body
+    Net::HTTP.get_response(URI("https://raster.shields.io/badge/gem%20downloads-#{gem_downloads}-green.png")).body
   end
 
   def fetch_owner_downloads(owner:)
@@ -21,7 +21,7 @@ class Web < Sinatra::Base
     end
   end
 
-  before { content_type 'image/svg' }
+  before { content_type 'image/png' }
 
   get '/gems/:gem_name' do
     gem_name = params.fetch('gem_name')
