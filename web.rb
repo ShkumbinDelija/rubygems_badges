@@ -12,9 +12,7 @@ class Web < Sinatra::Base
   end
 
   def fetch_badge(gem_downloads:)
-    stream do |out|
-      out << URI.parse("https://raster.shields.io/badge/gem%20downloads-#{gem_downloads}-green.png").open.read
-    end
+    URI.parse("https://raster.shields.io/badge/gem%20downloads-#{gem_downloads}-green.png").open.read
   end
 
   def fetch_owner_downloads(owner:)
@@ -25,10 +23,10 @@ class Web < Sinatra::Base
 
   before do
     content_type 'image/png'
-    headers['Content-Disposition'] = 'inline; filename="remote-file"'
+    headers['Content-Disposition'] = 'inline; filename="remote-file.png"'
   end
 
-  get '/gems/:gem_name' do
+  get '/gems/:gem_name.png' do
     gem_name = params.fetch('gem_name')
 
     gem_downloads = number_with_delimiter(number: fetch_gem_downloads(gem_name: gem_name))
@@ -36,7 +34,7 @@ class Web < Sinatra::Base
     fetch_badge(gem_downloads: gem_downloads)
   end
 
-  get '/owners/:owner' do
+  get '/owners/:owner.png' do
     owner = params.fetch('owner')
 
     gem_downloads = number_with_delimiter(number: fetch_owner_downloads(owner: owner))
