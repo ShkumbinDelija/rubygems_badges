@@ -1,4 +1,4 @@
-# RubyGems Badges
+# Ruby Gems Downloads Badges
 
 This is an app hosted in https://www.render.com
 
