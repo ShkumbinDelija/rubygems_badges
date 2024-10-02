@@ -6,17 +6,17 @@ Generates badges to show the download counter for a specific gem or for your who
 
 # Specific Gem download counter
 
-https://rubygem-badges.onrender.com/gems/just_the_gem.png
+https://rubyontracks.com/gems/just_the_gem.png
 
-![Gem Downloads](https://rubygem-badges.onrender.com/gems/just_the_gem.png)
+![Gem Downloads](https://rubyontracks.com/gems/just_the_gem.png)
 
-https://rubygem-badges.onrender.com/gems/date_defaulter.png
+https://rubyontracks.com/gems/date_defaulter.png
 
-![Gem Downloads](https://rubygem-badges.onrender.com/gems/date_defaulter.png)
+![Gem Downloads](https://rubyontracks.com/gems/date_defaulter.png)
 
 # Author Gem download counter
 
-https://rubygem-badges.onrender.com/owners/shkumbindelija.png
+https://rubyontracks.com/owners/shkumbindelija.png
 
-![Gem Downloads](https://rubygem-badges.onrender.com/owners/shkumbindelija.png)
+![Gem Downloads](https://rubyontracks.com/owners/shkumbindelija.png)
 
